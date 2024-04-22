@@ -2,32 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply h-screen bg-gradient-to-b from-slate-200 to-white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+nav #menu__list a,
+nav #navigation__end a {
+  @apply font-medium lg:font-semibold;
+}
+
+nav #menu__list span {
+  @apply font-normal;
+}
+
+.hover__menu {
+  @apply relative mb-2 flex flex-col gap-2 border-l border-slate-200 pl-5 lg:hidden lg:border-none lg:pl-0 lg:shadow-2xl lg:shadow-slate-500/20 lg:after:static lg:group-hover:absolute lg:group-hover:left-0 lg:group-hover:top-8 lg:group-hover:flex lg:group-hover:h-fit lg:group-hover:flex-col lg:group-hover:gap-5 lg:group-hover:rounded-xl lg:group-hover:bg-white lg:group-hover:p-5;
 }
