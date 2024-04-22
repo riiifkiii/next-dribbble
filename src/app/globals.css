@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply h-screen bg-gradient-to-b from-slate-200 to-white;
+  @apply h-screen bg-[#f8f7f4];
 }
 
 nav #menu__list a,
