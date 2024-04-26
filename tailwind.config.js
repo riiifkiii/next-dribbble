@@ -1,3 +1,5 @@
+const { transform } = require("next/dist/build/swc");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -14,6 +16,7 @@ module.exports = {
       },
       animation: {
         colorLop: "colorLop 32s linear infinite",
+        marquee: "marquee 72s linear infinite",
       },
       keyframes: {
         colorLop: {
@@ -23,11 +26,17 @@ module.exports = {
           "75%": { backgroundColor: "#edf3d8" },
           "100%": { backgroundColor: "#ffda79" },
         },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
-    },
-    fontFamily: {
-      monaSans: ['"Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'],
-      sourceSerife: ['"Source Serif 4", Georgia, serif'],
+      fontFamily: {
+        monaSans: [
+          '"Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
+        ],
+        sourceSerife: ['"Source Serif 4", Georgia, serif'],
+      },
     },
   },
   plugins: [],
