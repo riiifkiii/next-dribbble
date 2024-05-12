@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigations";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
+import Explore from "@/components/Explore";
 
 export const metadata = {
   title:
@@ -13,6 +14,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <Marquee />
+      <Explore />
     </>
   );
 }
