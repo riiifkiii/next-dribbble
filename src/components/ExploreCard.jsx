@@ -22,8 +22,8 @@ export default function ExploreCard({
           <Image
             src={exampleImages}
             alt="title"
-            width={500}
-            height={400}
+            width={700}
+            height={500}
             className="rounded-lg"
           />
         </div>

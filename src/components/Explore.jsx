@@ -138,13 +138,13 @@ const exploreData = [
 
 export default function Explore() {
   return (
-    <div>
+    <div className="mb-[150px]">
       <div className="mb-10 text-center text-[35px] md:text-[48px]">
         <h1>Explore inspiring designs</h1>
       </div>
       <div
         id="explore__container"
-        className="grid grid-cols-1 gap-[36px] px-5 lg:grid-cols-4 lg:px-[72px]"
+        className="grid grid-cols-1 gap-[36px] px-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 lg:px-[72px]"
       >
         {exploreData.map((item) => {
           return (
